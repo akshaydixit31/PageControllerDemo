@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PageControllerDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ga1-7F-Uwm">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="Pj8-Rs-bd9">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Pj8-Rs-bd9" firstAttribute="top" secondItem="ga1-7F-Uwm" secondAttribute="top" id="cDO-fS-N11"/>
+                                    <constraint firstItem="Pj8-Rs-bd9" firstAttribute="leading" secondItem="ga1-7F-Uwm" secondAttribute="leading" id="jyA-Nx-XOw"/>
+                                    <constraint firstAttribute="trailing" secondItem="Pj8-Rs-bd9" secondAttribute="trailing" id="sK7-iy-xqC"/>
+                                    <constraint firstAttribute="bottom" secondItem="Pj8-Rs-bd9" secondAttribute="bottom" id="ymr-Ne-rKu"/>
+                                </constraints>
+                            </view>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="6" translatesAutoresizingMaskIntoConstraints="NO" id="ha8-7Q-cOa">
+                                <rect key="frame" x="112.5" y="325" width="150" height="37"/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="4Sy-49-rsa"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="pageButtonTap:" destination="BYZ-38-t0r" eventType="valueChanged" id="sX1-Lv-SLq"/>
+                                </connections>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ga1-7F-Uwm" secondAttribute="trailing" id="70S-eS-wun"/>
+                            <constraint firstItem="ga1-7F-Uwm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GHj-vr-pJ5"/>
+                            <constraint firstItem="ha8-7Q-cOa" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="NTe-ZM-nxs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="ga1-7F-Uwm" secondAttribute="top" constant="20" id="UiR-O8-KnT"/>
+                            <constraint firstItem="ga1-7F-Uwm" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.45" id="dsJ-cx-6en"/>
+                            <constraint firstItem="ha8-7Q-cOa" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="k8M-AV-2r9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="carImage" destination="Pj8-Rs-bd9" id="xrk-U5-pIm"/>
+                        <outlet property="pageCounter" destination="ha8-7Q-cOa" id="2VX-UQ-d7i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-454" y="-12"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1" width="2880" height="1800"/>
+    </resources>
+</document>
